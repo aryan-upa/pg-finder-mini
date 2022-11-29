@@ -1,0 +1,42 @@
+.landing-image {
+    padding: 160px 20px;
+    background-image: url(../img/index-banner-bg.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .landing-image {
+        padding: 100px 22px;
+    }
+}
+
+.search-box {    
+    max-width: 600px;
+    margin:auto;
+}
+
+.city-container{
+    text-align: center;
+    margin-top:55px;
+}
+
+.city img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+}
+
+.city {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 150ms ease-in-out;
+}
+
+.city:focus,
+.city:hover {
+    box-shadow: rgba(36, 31, 31, 0.3) 0 5px 10px, 0 -5px 10px, 5px 5px 10px, -5px -5px 10px;
+}
