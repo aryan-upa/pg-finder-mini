@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,400;0,700;1,300;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    background-image: linear-gradient(#d99a5a, #d99a5a);
+    background-size: 0 0.1em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+}
+
+a:hover {
+    background-size: 100% 0.1em;
+    background-position-x: 0;
+}
+
+button {
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    background-color: #6960eb;
+    color: white;
+    font-weight: 500;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.5rem;
+    transition: 250ms linear;
+}
+
+input {
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    background-color: #6960eb;
+    color: white;
+    font-weight: 500;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.5rem;
+    transition: 250ms linear;
+}
+
+button:hover {
+    transform: translateZ(5px);
+    box-shadow: 5px 5px 10px gray, -5px -5px 10px gray;
+}
+
+input {
+    outline: none;
+    font-family: Lobster, cursive;
+    font-weight: 400;
+    font-size: 15px;
+    background: none;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;;
+}
+
+/* NavBar */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+nav .icon img {
+    width: 5%;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    transition: 300ms linear;
+}
+
+nav .icon img:hover {
+    box-shadow:
+            3px 3px 10px gray,
+            3px -3px 10px gray,
+            -3px 3px 10px gray,
+            -3px -3px 10px gray;;
+}
+
+nav .links {
+    box-sizing: border-box;
+    width: available;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.search-button {
+    margin: auto 0 auto;
+}
+
+.search-button input {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: 500;
+}
+
+.search-button input:focus {
+    box-shadow: 3px 3px 10px gray,
+    3px -3px 10px gray,
+    -3px 3px 10px gray,
+    -3px -3px 10px gray;;
+}
+
+nav .links .text-links {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
