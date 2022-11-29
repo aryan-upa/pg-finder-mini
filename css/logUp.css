@@ -1,0 +1,106 @@
+.panel {
+    display: flex;
+    margin: 2rem 5rem;
+    height: 80vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.vertical-bar {
+    height: 70%;
+    background-color: black;
+    width: 2px;
+    margin: 0 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 0 5rem 2rem;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 60%;
+    align-items: center;
+}
+
+.field {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.radio-el {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.card form button {
+    width: 50%;
+}
+
+input {
+    transition: all 200ms linear;
+    color: black;
+}
+
+input:focus {
+    box-shadow:
+            2px 0 5px gray,
+            -2px 0 5px gray,
+            0 -2px 5px gray,
+            0 2px 5px gray;
+}
+
+.hr-under-nav {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.hr-bar {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .panel {
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column-reverse;
+        height: unset;
+        row-gap: 2rem;
+    }
+
+    .vertical-bar {
+        display: none;
+    }
+
+    .hr-bar {
+        display: unset;
+    }
+}
+
