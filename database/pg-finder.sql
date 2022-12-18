@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2022 at 10:51 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Nov 25, 2022 at 07:02 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1469,8 +1469,7 @@ INSERT INTO `users` (`id`, `email`, `password`, `full_name`, `phone`, `gender`, 
 (29, 'a@bcd.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Aryan', '1234567890', 'male', 'GLA'),
 (30, 'aa@bb.com', 'c55e94247fbfc4f11842fc3bd979e5beb5ed1080', 'A', '9638527410', 'male', 'GLA'),
 (31, 'k@b.com', '114a42d736ced0dce1affc1e898c69b3998426df', 'Khubchand', '9999988888', 'male', 'GLA'),
-(32, 'k@b.com', '114a42d736ced0dce1affc1e898c69b3998426df', 'Khubchand', '9999988888', 'male', 'GLA'),
-(33, 'krishna@gmail.com', 'dea742e166979027ae70b28e0a9006fb1010e760', 'Narendra Modi', '8946515464', 'male', 'INDIA');
+(32, 'k@b.com', '114a42d736ced0dce1affc1e898c69b3998426df', 'Khubchand', '9999988888', 'male', 'GLA');
 
 --
 -- Indexes for dumped tables
@@ -1510,6 +1509,13 @@ ALTER TABLE `properties_amenities`
   ADD PRIMARY KEY (`id`),
   ADD KEY `property_id` (`property_id`),
   ADD KEY `amenity_id` (`amenity_id`);
+
+--
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_id` (`property_id`);
 
 --
 -- Indexes for table `users`
@@ -1552,10 +1558,16 @@ ALTER TABLE `properties_amenities`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Constraints for dumped tables
@@ -1580,6 +1592,12 @@ ALTER TABLE `properties`
 ALTER TABLE `properties_amenities`
   ADD CONSTRAINT `properties_amenities_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`),
   ADD CONSTRAINT `properties_amenities_ibfk_2` FOREIGN KEY (`amenity_id`) REFERENCES `amenities` (`id`);
+
+--
+-- Constraints for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD CONSTRAINT `testimonials_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
